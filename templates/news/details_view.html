@@ -1,0 +1,16 @@
+{% extends "main/layout.html" %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+    <article class="post">
+        <header>
+            <div class="title">
+                <h1>{{ article.title }}</h1>
+                <p>{{ article.author }}</p>
+            </div>
+        </header>
+        <span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+        <p>{{ article.full_text }}</p>
+    </article>
+{% endblock %}

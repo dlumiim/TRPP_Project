@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js">
+    <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="{% url 'home' %}">Light Emission</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="{% url 'home' %}">Главная</a></li>
+								<li><a href="{% url 'about' %}">О нас</a></li>
+								<li><a href="{% url 'news_home' %}">Статьи</a></li>
+							</ul>
+						</nav>
+					</header>
+				<!-- Main -->
+					<div id="main">
+
+						{% block content%} {% endblock %}
+
+					</div>
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Intro -->
+							<section id="intro">
+								<a href="#" class="logo"><img src="{% static 'main/img/logo.png' %}" alt="logo" /></a>
+								<header>
+									<h2>Light Emission</h2>
+									<p>Лазерная лаборатория</p>
+								</header>
+							</section>
+
+						<!-- Mini Posts -->
+							<section>
+								<div class="mini-posts">
+
+									<!-- Mini Post -->
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Удивительный мир лазеров</a></h3>
+												<p>Образовательный набор «Принципы работы лазера. Спонтанное и вынужденное излучение».</p>
+											</header>
+											<a href="#" class="image"><img src="{% static 'main/img/1.jpeg' %}" alt="" /></a>
+										</article>
+
+									<!-- Mini Post -->
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Люминесцентная микроскопия</a></h3>
+												<p>Образовательный набор «Изучение принципа работы лазерного микроскопа»</p>
+											</header>
+											<a href="#" class="image"><img src="{% static 'main/img/2.jpeg' %}" alt="" /></a>
+										</article>
+
+									<!-- Mini Post -->
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Активные элементы</a></h3>
+												<p>Образовательный набор «Изучение процесса оптической накачки лазера на кристалле иттриевого ванадата с удвоением частоты».</p>
+											</header>
+											<a href="#" class="image"><img src="{% static 'main/img/3.jpeg' %}" alt="" /></a>
+										</article>
+
+									<!-- Mini Post -->
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Лазерное шоу</a></h3>
+												<p>Образовательный набор «Лазерный спирограф для генерации трёхцветных динамических лучевых композиций»</p>
+											</header>
+											<a href="#" class="image"><img src="{% static 'main/img/4.jpg' %}" alt="" /></a>
+										</article>
+
+								</div>
+							</section>
+
+						<!-- Posts List -->
+							<section>
+								<ul class="posts">
+									<li>
+										<article>
+											<header>
+												<h3>Соловьёва Наталья Сергеевна</h3>
+												<p>Директор школы</p>
+											</header>
+											<a href="#" class="image"><img src="{% static 'main/img/director.jpg' %}" alt="" /></a>
+										</article>
+									</li>
+									<li>
+										<article>
+											<header>
+												<h3>Ашурбеков Сефер Ашурбекович</h3>
+												<p>Заведующий лаборатории</p>
+											</header>
+											<a href="#" class="image"><img src="{% static 'main/img/zav.jpg' %}" alt="" /></a>
+										</article>
+									</li>
+									<li>
+										<article>
+											<header>
+												<h3>Матвиенко Диана Алексеевна</h3>
+												<p>Методист лаборатории</p>
+											</header>
+											<a href="#" class="image"><img src="{% static 'main/img/metodist.jpeg' %}" alt="" /></a>
+										</article>
+									</li>
+								</ul>
+							</section>
+
+						<!-- About -->
+							<section class="blurb">
+								<h2>О нас</h2>
+								<p>История создания и развития лазерной лаборатории</p>
+								<ul class="actions">
+									<li><a href="{% url 'about' %}" class="button">Читать</a></li>
+								</ul>
+							</section>
+
+					</section>
+
+			</div>
+	</body>
+</html>
+<!-- <aside>
+        <img src="{% static 'main/img/logo.png' %}" alt="logo">
+        <span class="logo">Light Emission</span>
+        <h3>Навигация</h3>
+        <ul>
+            <a href="{% url 'home' %}"><li>Главная</li></a>
+            <a href="{% url 'about' %}"><li>О нас</li></a>
+            <a href="{% url 'news_home' %}"><li>Статьи</li></a>
+        </ul>
+    </aside> -->
+<!-- Wrapper -->

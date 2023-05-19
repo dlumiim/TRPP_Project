@@ -1,0 +1,22 @@
+{% extends "main/layout.html" %}
+
+{% block title %}Статьи{% endblock %}
+
+
+
+{% block content %}
+    <div class="features">
+        <h1>Статьи</h1>
+    <article class="post">
+    {% if news %}
+        {% for el in news %}
+            <h1><a href="{% url 'news-detail' el.id %}">{{ el.title }}</a></h1>
+            <p>{{ el.author }}</p>
+    {% endfor %}
+    {% else %}
+        <p>Статьи отсутствуют</p>
+    {% endif %}
+        </article>
+    </div>
+
+{% endblock %}
