@@ -2,7 +2,7 @@
 
 It's project wedsite for laser laboratory 
 
-TRPP_Project
+TRPP_Project \n
   main
     migrations
       __init__.py
